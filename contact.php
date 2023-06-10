@@ -97,7 +97,7 @@
                             <input type="submit" class="contactSubmitButton text-black work-medium hoverOpacity">
                     </form>                    
                     <br/>
-                    <!-- <img src="assets/images/contact/doodle5.png" style="position: relative;width: 200px; left: -120px;" class="visible-xs visible-sm"> -->
+                    <!-- <img src="assets/img/doodle5.png" style="position: relative;width: 200px; left: -120px;" class="visible-xs visible-sm"> -->
                 </div>
             </div>
         </div>
