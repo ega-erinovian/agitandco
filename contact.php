@@ -19,29 +19,32 @@
 
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/animate.css" rel="stylesheet">
 </head>
 <body>
     <section class="contact-section">
         <!-- Animated navbar-->
         <nav class="navbar navbar-expand-lg">
+            
             <div class="container">
-            <a class="navbar-brand" href="index.php">
-                <img src="assets/img/me.png" alt="logo" width="75" />
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end navbar-right" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                <a class="nav-link me-4"style="color:#000000 !important" href="index.php">Home</a>
-                <a class="nav-link me-4"style="color:#000000 !important" href="journal.php?page-nr=1">Journal</a>
-                <a class="nav-link me-4"style="color:#000000 !important" href="portfolio.php">Portofolio</a>
-                <a class="nav-link me-4"style="color:#000000 !important" href="about.php">About Us</a>
-                <a class="nav-link me-4 active"style="color:#000000 !important" href="contact.php">Contact</a>
+                <a class="navbar-brand" href="index.php">
+                    <img src="assets/img/me.png" alt="logo" width="75" />
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end navbar-right" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                    <a class="nav-link me-4"style="color:#000000 !important" href="index.php">Home</a>
+                    <a class="nav-link me-4"style="color:#000000 !important" href="journal.php?page-nr=1">Journal</a>
+                    <a class="nav-link me-4"style="color:#000000 !important" href="portfolio.php">Portofolio</a>
+                    <a class="nav-link me-4"style="color:#000000 !important" href="about.php">About Us</a>
+                    <a class="nav-link me-4 active"style="color:#000000 !important" href="contact.php">Contact</a>
+                    </div>
                 </div>
             </div>
-            </div>
         </nav>
+        <div class="overlay"></div>
         <!-- Animated navbar -->
         <?php
             $query = mysqli_query($connect, "SELECT * FROM background WHERE tempatgambar='contact'");
@@ -55,8 +58,8 @@
                 $array_imgs = explode(",", $img_files);
             }
         ?>
-        <div class="contact-container row">
-            <div class="col-lg-6 visible-md visible-lg contact-bg" style="background-image:linear-gradient(#1a1a1a69,#1a1a1a69), url(<?='assets/img/page/'.$array_imgs[0]?>);"></div>
+        <div class="contact-container row wow">
+            <div class="col-lg-6 visible-md visible-lg contact-bg Aligner" style="background-image:linear-gradient(#1a1a1a69,#1a1a1a69), url(<?='assets/img/page/'.$array_imgs[0]?>);"></div>
             <div class="col-lg-6 visible-md visible-lg">
                 <div class="contact-section-form" style="max-width: 550px; margin: auto; padding-top: 100px; padding-left: 50px; padding-right: 50px;">
                     <h1 class="source-semibold visible-xs visible-sm">Contact</h1>
@@ -111,5 +114,24 @@
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script>
+        const dropdownNav = document.querySelector('.navbar-toggler');
+        const overlay = document.querySelector('.overlay');
+        const navbarCollapse = document.querySelector('.navbar-collapse');
+
+        dropdownNav.addEventListener('click', function() {
+            navbarCollapse.classList.toggle('show');
+            overlay.style.display = overlay.style.display === 'block' ? 'none' : 'block';
+        });
+
+        // Menutup dropdown saat overlay diklik
+        overlay.addEventListener('click', function() {
+            navbarCollapse.classList.remove('show');
+            overlay.style.display = 'none';
+        });
+
+    </script>
+    
 </body>
 </html>

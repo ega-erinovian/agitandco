@@ -13,9 +13,12 @@
     <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
 
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/animate.css" rel="stylesheet">
+    
 </head>
 
 <body>
@@ -87,9 +90,9 @@
                     <div class="row">
                         <div class="col-md-2"></div>
                         <div class="col-md-8">
-                            <div id="<?=$devisi?>"class="row wow fadeInRight photographerList content">
+                            <div id="<?=$devisi?>"class="row wow fadeInRight photographerList content" data-wow-duration="2s" > 
                                 <div class="col-md-6">
-                                    <img src="<?= "assets/img/team/".$id_team."/".$img;?>" alt="" class="img-responsive" style="width:100%">
+                                    <img src="<?= "assets/img/team/".$id_team."/".$img;?>" alt="" class="img-responsive wow fadeInRight" style="width:100%">
                                 </div>
                                     <div class="col-md-6">
                                         <div>
@@ -122,6 +125,8 @@
     <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
     <script src="https://bareodds.co/assets/js/jquery-3.2.1.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/wow.min.js"></script>
     <!-- Bootstrap JavaScript -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="path/to/masonry.pkgd.min.js"></script>
@@ -132,6 +137,7 @@
     <script>
     new WOW().init();
     </script>
+    
     <script>
         
         function toggleContent(content) {

@@ -1,3 +1,30 @@
+/* animasi */
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+.fade-in.show {
+    opacity: 1;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Warna latar belakang gelap awal */
+  z-index: 80; /* Pastikan elemen overlay tampil di atas konten lainnya */
+  display: none; /* Sembunyikan secara default */
+  transition: background-color 0.3s; /* Transisi perubahan warna latar belakang */
+}
+
+.overlay.active {
+  background-color: rgba(0, 0, 0, 0.8); /* Warna latar belakang gelap setelah toggler ditekan */
+}
+
+
 /*** FONT ***/
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro&family=Work+Sans&display=swap');
 /*FONT*/
@@ -94,7 +121,16 @@
   background-image:linear-gradient(#1a1a1a69,#1a1a1a69), url('https://images.unsplash.com/photo-1523438885200-e635ba2c371e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80'); 
   background-size: cover; 
   background-position: center center;
+  /* height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center; */
 }
+
 
 .contact-container-item {
   max-width: 50%;
@@ -109,11 +145,11 @@
 }
 
 @media screen and (max-width: 767px) {
-  .contact-container {
+  .contact-bg {
     background-image: none !important;
   }
 
-  .contact-container-item {
+  .contact-bg {
     display: none !important;
   }
 }
@@ -194,6 +230,7 @@ nav a.active{
   position: absolute;
   top: 1rem;
   z-index: 101;
+  background-color: rgba(0, 0, 0, 0.5); /* Warna latar belakang gelap */
 }
 
 /* navbar for contact */
@@ -222,6 +259,9 @@ nav a.active{
 .journal-details nav .navbar-brand{
   filter: brightness(0.3);
   -webkit-filter: brightness(0.3);
+}
+.journal-details img{
+  max-height: 480px;
 }
 
 .journal-details nav .nav-link{

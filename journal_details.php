@@ -16,12 +16,16 @@
     <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> -->
 
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/animate.css" rel="stylesheet">
+    <link href="assets/css/animate.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="css/site.css"> -->
 </head>
 <body>
-  <section class="journal-details">
+  <section class="journal-details wow fadeInUp" >
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg">
       <div class="container">
@@ -66,10 +70,10 @@
             foreach ($array_imgs as $img) {
               $i++;
           ?>
-          <img src="<?='assets/img/journal/'.$id_journal.'/'.$img;?>" alt="cover" height="480px" class="mb-3">
+          <img src="<?='assets/img/journal/'.$id_journal.'/'.$img;?>" alt="cover"  class="mb-3 wow fadeInRight" data-wow-offset="100">
           <?php } ?>
         </div>
-        <div class="journal-details-text text-center w-50">
+        <div class="journal-details-text text-center w-50 wow fadeInRight" data-wow-offset="100">
           <p style="text-align: justify;"><?= $deskripsi ?></p>
         </div>
       </div>
@@ -85,8 +89,11 @@
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
-
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
 </body>
 </html>
