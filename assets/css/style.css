@@ -1,0 +1,899 @@
+/* animasi test github*/
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+.fade-in.show {
+    opacity: 1;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Warna latar belakang gelap awal */
+  z-index: 80; /* Pastikan elemen overlay tampil di atas konten lainnya */
+  display: none; /* Sembunyikan secara default */
+  transition: background-color 0.3s; /* Transisi perubahan warna latar belakang */
+}
+
+.overlay.active {
+  background-color: rgba(0, 0, 0, 0.8); /* Warna latar belakang gelap setelah toggler ditekan */
+}
+
+
+/*** FONT ***/
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro&family=Work+Sans&display=swap');
+/*FONT*/
+
+.source-regular {
+  font-family: 'Source Serif Pro', serif;
+  font-weight: 400;
+}
+
+.source-semibold {
+ font-family: 'Source Serif Pro', serif;
+  font-weight: 600;
+}
+
+.source-bold {
+ font-family: 'Source Serif Pro', serif;
+  font-weight: 700;
+}
+
+.work-light{
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+}
+
+.work-regular{
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+}
+
+.work-medium{
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 500;
+}
+
+.work-bold{
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 700;
+}
+
+:root{
+  --white: #f9f9ec;
+  --grey-700: #504A40;
+  --teracotta: #E2725B;
+  --w50 :#857f72;
+  --w400 :#a39e93;
+}
+
+.text-black{color:#2B351A !important;}
+
+/*** ALIGNER ***/
+.Aligner {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: 767px) {
+    
+      background-image: none !important;
+  }
+}
+
+.Aligner-item {
+  max-width: 50%;
+  @media (max-width: 767px) {
+    
+    display: none !important;
+  }
+}
+
+.Aligner-item--top {
+  align-self: flex-start;
+}
+
+.Aligner-item--bottom {
+  align-self: flex-end;
+}
+
+/*** NOSPACE ***/
+.nospace {
+  margin:0;
+  padding:0; 
+}
+
+/*** CONTACT ***/
+.contact-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-bg{
+  height: 100%;
+  background-image:linear-gradient(#1a1a1a69,#1a1a1a69), url('https://images.unsplash.com/photo-1523438885200-e635ba2c371e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80'); 
+  background-size: cover; 
+  background-position: center center;
+  /* height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+
+.contact-container-item {
+  max-width: 50%;
+}
+
+.contact-container-item--top {
+  align-self: flex-start;
+}
+
+.contact-container-item--bottom {
+  align-self: flex-end;
+}
+
+@media screen and (max-width: 767px) {
+  .contact-bg {
+    background-image: none !important;
+  }
+
+  .contact-bg {
+    display: none !important;
+  }
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: 'Work Sans', sans-serif;
+  color: var(--white) !important;
+}
+
+a{
+  color: var(--white) !important;
+  text-decoration: none;
+}
+
+a:hover{
+  color: var(--white);
+  text-decoration: none;
+}
+
+ul{
+  list-style: none;
+}
+
+h1, h2, h5{
+  overflow: hidden;
+}
+
+h1, h2{
+  font-family: 'Source Serif Pro', serif;
+}
+
+body{
+  background-color: var(--white);
+}
+
+/*** HEADER ***/
+header{
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+header.journal{
+  background-image: linear-gradient(#00000065, #00000000), url(https://iluminen.com/wp-content/uploads/2022/09/BJE000868-scaled-1.jpg);
+}
+
+header.portfolio{
+  background-image: linear-gradient(#00000065, #00000000), url(https://iluminen.com/wp-content/uploads/2021/03/hotel-indonesia-kempinski-jakarta-indonesia-vinsy-dandy-wedding-iluminen-bali-photography-junebug-photobug-dirtybootsmessyhair-destination-photographer001-scaled-1.jpg);
+}
+
+/**** NAVBAR ****/
+nav{
+  position: absolute;
+  top: 0;
+  z-index: 100;
+}
+
+nav .nav-link{
+  color: var(--white) !important;
+  width: fit-content;
+}
+
+nav a.nav-link:hover{
+  border-bottom: 3px solid var(--white);
+}
+
+nav a.active{
+  border-bottom: 3px solid var(--white);
+}
+
+.dropdown-content{
+  position: absolute;
+  top: 1rem;
+  z-index: 101;
+  background-color: rgba(0, 0, 0, 0.5); /* Warna latar belakang gelap */
+}
+
+/* navbar for contact */
+.contact-section nav{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.contact-section i{
+  color: var(--grey-700) !important;
+}
+.contact-section nav .nav-link{
+  color: var(--grey-700) !important;
+}
+
+.contact-section nav .nav-link:hover{
+  border-bottom: 3px solid var(--grey-700);
+}
+.contact-section nav a.active{
+  border-bottom: 3px solid var(--grey-700);
+}
+
+/* Navbar for Journal Details */
+.journal-details nav .navbar-brand{
+  filter: brightness(0.3);
+  -webkit-filter: brightness(0.3);
+}
+.journal-details img{
+  max-height: 480px;
+}
+
+.journal-details nav .nav-link{
+  color: var(--grey-700) !important;
+}
+
+.journal-details nav .nav-link:hover{
+  border-bottom: 3px solid var(--grey-700);
+}
+
+.journal-details nav a.active{
+  border-bottom: 3px solid var(--grey-700);
+} */
+
+.scrolldown{
+  position: absolute;
+  bottom: 1rem;
+  -webkit-animation: MoveUpDown 1.5s linear infinite;
+}
+
+@-webkit-keyframes MoveUpDown {
+  0%, 100% {
+    bottom: 1.5rem;
+  }
+  50% {
+    bottom: .6rem;
+  }
+}
+/* Navbar for Contact Section */
+.contact-section nav .navbar-brand{
+  filter: brightness(0.3);
+  -webkit-filter: brightness(0.3);
+}
+.contact-section img{
+  max-height: 480px;
+}
+
+.contact-section nav .nav-link{
+  color: var(--grey-700) !important;
+}
+
+.contact-section nav .nav-link:hover{
+  border-bottom: 3px solid var(--grey-700);
+}
+
+.contact-section nav a.active{
+  border-bottom: 3px solid var(--grey-700);
+} */
+
+.scrolldown{
+  position: absolute;
+  bottom: 1rem;
+  -webkit-animation: MoveUpDown 1.5s linear infinite;
+}
+
+@-webkit-keyframes MoveUpDown {
+  0%, 100% {
+    bottom: 1.5rem;
+  }
+  50% {
+    bottom: .6rem;
+  }
+}
+/**** HOME ****/
+.carousel{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow-y: hidden;
+}
+
+.carousel .carousel-item img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(.7);
+  -webkit-filter: brightness(.7);
+}
+
+.home-container{
+  width: 100%;
+  position: relative;
+}
+
+.carousel-item{
+  min-width: 100vw !important;
+  min-height: 100vh !important;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat
+}
+
+/**** JOURNAL ****/
+/* Journal Container */
+.journal-section{
+  background-color: var(--grey-700);
+}
+
+.journal-container{
+  width: 100%;
+  position: relative;
+}
+
+/* Journal Item */
+.journal-item{
+  position: relative;
+  height: 480px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+}
+
+.journal-item .journal-content button{
+  background-color: transparent;
+  border: none;
+}
+
+.journal-item .journal-content{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 3rem;
+}
+
+.journal-item:hover{
+  filter: brightness(1.4);
+  -webkit-filter: brightness(1.4);
+}
+
+.journal-item span{
+  text-transform: capitalize;
+}
+
+.journal-item button h2{
+  text-transform: capitalize;
+}
+
+/*** JOURNAL DETAILS ***/
+.journal-details .journal-details-content h1{
+  color: var(--grey-700) !important;
+}
+
+.journal-details .journal-details-content p{
+  color: var(--grey-700) !important;
+}
+
+.journal-details-text p{
+  font-size: .8rem;
+  margin-bottom: 3rem;
+}
+
+/**** PORTFOLIO ****/
+/* portfolio Container */
+.portfolio-container{
+  width: 100vw;
+  position: relative;
+  background-color: var(--grey-700);
+}
+
+.scrolldown{
+  position: absolute;
+  bottom: 1rem;
+  -webkit-animation: MoveUpDown 1.5s linear infinite;
+}
+
+@-webkit-keyframes MoveUpDown {
+  0%, 100% {
+    bottom: 1.5rem;
+  }
+  50% {
+    bottom: .6rem;
+  }
+}
+
+/* portfolio Item */
+.portfolio-item{
+  position: relative;
+  height: 480px;
+  background-image:
+  linear-gradient(#2b262384,#2b262384),url(https://iluminen.com/wp-content/uploads/2023/02/AVW_0466322-scaled.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+}
+
+.portfolio-item.category{
+  position: relative;
+  height: 356px;
+  width: 100%;
+  background-image:
+  linear-gradient(#2b262384,#2b262384),url(https://iluminen.com/wp-content/uploads/2023/02/AVW_0466322-scaled.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+}
+
+.portfolio-item .portfolio-content{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 3rem;
+}
+
+.portfolio-item .portfolio-content.category{
+  position: static;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.portfolio-item .portfolio-content button{
+  background-color: transparent;
+  border: none;
+}
+
+.portfolio-item:hover{
+  filter: brightness(1.4);
+  -webkit-filter: brightness(1.4);
+}
+
+.portfolio-item span{
+  text-transform: capitalize;
+}
+
+.portfolio-item button h2{
+  text-transform: capitalize;
+}
+
+/**** PORTFOLIO DETAILS ****/
+.portfolio-details header.portfolio{
+  overflow: hidden;
+  text-transform: capitalize;
+}
+
+/* .portfolio-details header.portfolio{
+  background-image: linear-gradient(#2a2a2a88, #2a2a2a88), url(https://iluminen.com/wp-content/uploads/2023/02/AVW_0466322-scaled.jpg);
+} */
+
+.portfolio-details-content .portfolio-comp-logo{
+  filter: brightness(.5);
+  -webkit-filter: brightness(.5);
+}
+
+.pagination {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: transparent;
+}
+
+.pagination li {
+  display: inline
+}
+
+.pagination li a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 5px 10px;
+  color: #000
+}
+
+/* Active and Hoverable Pagination */
+/* Journal pagination */
+.pagination li a {
+  font-size: .7rem;
+  color: #c9bba1 !important;
+}
+
+.pagination li a.active {
+  color: var(--white) !important;
+  font-weight: bolder;
+}
+
+.pagination li a:hover:not(.active) {
+  color: var(--white) !important;
+  font-weight: bolder;
+}
+
+/* Portfolio pagination */
+.portfolio-section .pagination li a {
+  font-size: .7rem;
+  color: #b0a081 !important;
+}
+
+.portfolio-section .pagination li a.active {
+  color: var(--grey-700) !important;
+  font-weight: bolder;
+}
+
+.portfolio-section .pagination li a:hover:not(.active) {
+  color: var(--grey-700) !important;
+  font-weight: bolder;
+}
+
+.portfolio-details-gallery{
+  width: 50%;
+}
+
+@media screen and (max-width:767px){
+  .portfolio-details-gallery{
+    width: 100%;
+  }
+}
+
+/*CONTACT PAGE*/
+.contact-section{
+  background-color: var(--white);
+  color: var(--grey-700) !important;
+}
+.contact-section .contact-section-form h1{
+  color: var(--grey-700) !important;
+}
+
+.contact-section .contact-section-form p{
+  color: var(--grey-700) !important;
+}
+
+.contactInput {
+  background: transparent;
+  border: 0px;
+  border-bottom: 0.3px solid var(--grey-700);
+  padding: 10px 0px;
+  font-size: 14px;
+  margin-bottom: 30px;
+  width: 100%;
+  color: var(--grey-700) !important;
+}
+
+.contactInput::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  opacity: 0.3;
+  /* Firefox */
+}
+
+.contactInput:focus {
+  outline: none !important;
+  border-bottom: 1px solid var(--grey-700);
+  box-shadow: none;
+}
+
+.contactTextArea {
+  background: transparent;
+  border: 1px solid var(--grey-700);
+  padding: 10px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.contactTextArea:focus {
+  outline: none !important;
+  border: 1px solid var(--grey-700);
+  box-shadow: none;
+}
+
+.contactSubmitButton {
+  border: 0;
+  background: transparent;
+  font-size: 14px;
+  color: #444F5E;
+}
+
+/*** FOOTER ***/
+footer p{
+  font-size: .75rem !important;
+}
+
+footer .col-lg-2 h1{
+  font-size: 1.5rem;
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+}
+
+/* Light footer */
+.home-section footer,
+.portfolio-section footer,
+.portfolio-details footer{
+  background-color: var(--white);
+}
+
+.home-section footer h1,
+.home-section footer p,
+.portfolio-section footer h1,
+.portfolio-section footer p,
+.portfolio-details footer h1,
+.portfolio-details footer p,
+.about-section footer h1,
+.about-section footer p{
+  color: var(--grey-700) !important;
+}
+
+/* Dark footer */
+.journal-section footer,
+.journal-details footer,
+/* .contact-section footer{
+  background-color: var(--grey-700);
+} */
+
+.journal-details footer h1,
+.journal-details footer p,
+.contact-section footer h1,
+.contact-section footer p{
+  color: var(--grey-700) !important;
+}
+
+/* Footer social media */
+footer .social-media a i{
+  filter: brightness(.6);
+  -webkit-filter: brightness(.6);
+}
+
+footer .social-media a:hover i{
+  filter: brightness(.4);
+  -webkit-filter: brightness(.4);
+}
+
+/* Footer social media - dark */
+.journal-section footer .social-media a i, 
+.journal-details footer .social-media a i,
+.contact-section footer .social-media a i{
+  filter: brightness(.8);
+  -webkit-filter: brightness(.8);
+}
+
+.journal-section footer .social-media a:hover i,
+.journal-details footer .social-media a:hover i,
+.contact-section footer .social-media a:hover i{
+  filter: brightness(1);
+  -webkit-filter: brightness(1);
+}
+
+/*** ABOUT ***/
+.container-fluid.nospace-about {
+  height: 100%;
+  background-color: var(--w50)!important;
+  color: #000!important;
+  margin:0; padding:0;
+  overflow: hidden!important;
+  margin-top: -30px; 
+  @media (max-width: 767px) {
+    
+    margin-top:0px!important;
+  }
+}
+.container-fluid.nospace-about .h2 .p {
+  color: #000!important;
+}
+.miring{
+  position: fixed;
+  right: 48px; 
+  top:50%; 
+  transform: rotate(90deg);
+  z-index: 100;
+ 
+}
+@media (max-width: 767px) {
+  .miring {
+    display: none;
+  }
+}
+
+.judul{
+  text-align: center;
+  color: var(--w400)!important;
+  /* font-family: "Source Serif Pro"; */
+  font-size: 30px;
+  font-weight: 1000;
+  margin-bottom: 20px;
+  line-height: 25px;
+}
+
+.devisi {
+  text-align: center;
+  color: black!important;
+  /* font-family: "Source Serif Pro"; */
+  font-size: 24px;
+  font-weight: 1000;
+  margin-bottom: 30px;
+  line-height: 25px;
+}
+
+.devisi-active{
+  color: var(--w50)!important;
+ 
+}
+
+#about-filters li {
+  cursor: pointer;
+  color: black!important;
+}
+
+#about-filters li.filter-active {
+  font-weight: bold;
+}
+
+/*Photographer*/
+.photographerName {
+  color: var(--w400)!important;
+  font-family: "Source Serif Pro";
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 0;
+  line-height: 25px;
+  }
+  
+  .photographerHashtag{
+  color: black!important;
+  font-family: "Source Sans Pro";
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 37px;
+  }
+  
+  .photographerDescription {
+
+  max-width: 372px;
+  color: black !important;
+  font-family: "Work Sans";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  margin-bottom: 35px;
+  }
+
+  @media (max-width: 767px) {
+    .photographerList {
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+  }
+
+  .teamphoto{
+    text-align: center; 
+  }
+  .teamphoto img {
+    max-width: 100%; /* Memastikan gambar tidak melebihi lebar kontainer */
+    margin: 0 auto; /* Memberikan celah atas dan bawah secara otomatis */
+  }
+ 
+  
+  .photographerDescription .a{
+    
+    max-width: 372px;
+    color: black !important;
+    font-family: "Work Sans";
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-bottom: 35px;
+    }
+  
+  .photographerInstagram {
+  color: black!important;
+  font-family: "Work Sans";
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 25px;
+  }
+  
+  .photographerInstagram:hover {
+  color: #eff0eb;
+  font-family: "Work Sans";
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 25px;
+  }
+  
+  
+  #photographerSection {
+    padding-top: 50px;
+    padding-bottom: 9px;
+  }
+  
+  .photographerList {
+    padding-bottom: 121px;
+    
+  }
+  .about-container img{
+    width: 500px;
+    max-height: 600px;
+  }
+  
+  .img-responsive, .thumbnail a>img, .thumbnail>img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.image-wrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.image-wrapper img {
+  height: 100%;
+  object-fit: contain;
+  width: auto;
+}
+
+@media (max-width: 900px) {
+  footer{
+    text-align: center;
+  }
+  footer .col-lg-2 h1{
+    font-size: 2.5rem;
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+  }
+}
