@@ -61,7 +61,7 @@
             }
         ?>
         <div class="contact-container row wow fadeIn">
-            <div class="col-lg-6 visible-md visible-lg contact-bg Aligner" style="background-image:linear-gradient(#1a1a1a69,#1a1a1a69), url(<?='assets/img/page/'.$array_imgs[0]?>);"></div>
+            <div class="col-lg-6 visible-md visible-lg contact-bg Aligner" style="background-image:linear-gradient(#1a1a1a69,#1a1a1a69), url(<?='assets/img/page/'.$array_imgs[0]?>);vertical-align: top;"></div>
             <div class="col-lg-6 visible-md visible-lg">
                 <div class="contact-section-form" style="max-width: 550px; margin: auto; padding-top: 100px; padding-left: 50px; padding-right: 50px;">
                     <h1 class="source-semibold visible-xs visible-sm">Contact</h1>

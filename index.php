@@ -68,7 +68,7 @@
                     <?php
                         foreach($array_imgs as $img ){
                     ?>
-                    <div class="carousel-item <?php if(array_search($img, $array_imgs) == 0) echo 'active' ?> " style="background-image: linear-gradient(#00000065, #00000000), url(<?='assets/img/page/home/'.$img?>);">
+                    <div class="carousel-item <?php if(array_search($img, $array_imgs) == 0) echo 'active' ?>" style="background-image: linear-gradient(#00000065, #00000000), url(<?='assets/img/page/home/'.$img?>);">
                     </div>
                     <?php } ?>
                 </div>
