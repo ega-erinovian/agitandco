@@ -77,7 +77,7 @@
             foreach ($array_imgs as $img) {
               $i++;
           ?>
-            <img id="portfolio-image" src="<?='assets/img/portofolio/'.$id_project.'/'.$img;?>" alt="portfolio">
+            <img class="w-100" id="portfolio-image" src="<?='assets/img/portofolio/'.$id_project.'/'.$img;?>" alt="portfolio">
             <?php
           }
           ?>
