@@ -223,7 +223,7 @@
             }
             ?>
             <div class="col">
-              <div class="card recent-sales overflow-auto">
+              <div class="card recent-sales overflow-auto p-3">
                 <div class="card-body">
                   <div class="row py-4">
                     <div class="col">

@@ -223,7 +223,7 @@
             }
             ?>
             <div class="col">
-              <div class="card recent-sales overflow-auto">
+              <div class="card recent-sales overflow-auto p-3">
 
                 <div class="card-body">
                   <div class="row py-4">
@@ -240,11 +240,11 @@
                       <div class="form-text"><span class="text-danger">*</span> Terisi otomatis</div>
                     </div>
                     <div class="mb-3">
-                      <label for="exampleFormControlInput1" class="form-label fw-bold fw-bold">Project Name</label>
+                      <label for="exampleFormControlInput1" class="form-label fw-bold fw-bold">Nama</label>
                       <input type="text" class="form-control" name="nama" id="projectName" placeholder="ex. Wedding Egie Tatsa" value='<?= $name ?>'readonly />
                     </div>
                     <div class="mb-3">
-                      <label for="exampleFormControlInput1" class="form-label fw-bold fw-bold">Project Location</label>
+                      <label for="exampleFormControlInput1" class="form-label fw-bold fw-bold">Email</label>
                       <input type="text" class="form-control" name="lokasi" id="projectName" placeholder="ex. Bali" value='<?= $email ?>'readonly />
                     </div>
                     <!-- <div class="mb-3">
@@ -254,8 +254,9 @@
                     </div> -->
                     <div class="mb-3">
                       <label for="exampleFormControlInput1" class="form-label fw-bold fw-bold">Pesan</label>
+                      <br>
                       <!-- <input type="text"value="<?= $message?>"> -->
-                      <textarea name="message" placeholder="'<?= $message?>'" id="" cols="120" rows="10" readonly></textarea>
+                      <textarea class="w-100" name="message" placeholder="'<?= $message?>'" id="" rows="10" readonly></textarea>
                       
                     </div>
                     

@@ -188,7 +188,7 @@
 
             <!-- Recent Projects -->
             <div class="col">
-              <div class="card recent-sales overflow-auto">
+              <div class="card recent-sales overflow-auto p-3">
 
                 <div class="card-body">
                   <div class="row align-items-center justify-content-between w-100">
@@ -198,7 +198,7 @@
                     <div class="col-2 text-end p-0">
                       <form action="./form_team.php" method="get">
                         <input type="hidden" name="kelola" value="tambah" />
-                        <button type="submit" class="btn btn-success"><i class="bi bi-file-earmark-plus-fill"></i> Tambah Team</button>
+                        <button type="submit" class="btn btn-success mb-3"><i class="bi bi-file-earmark-plus-fill"></i> Tambah Team</button>
                       </form>
                     </div>
                   </div>
