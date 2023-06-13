@@ -77,7 +77,7 @@
             foreach ($array_imgs as $img) {
               $i++;
           ?>
-            <img class="w-100" id="portfolio-image" src="<?='assets/img/portofolio/'.$id_project.'/'.$img;?>" alt="portfolio">
+            <img id="portfolio-image" src="<?='assets/img/portofolio/'.$id_project.'/'.$img;?>" alt="portfolio">
             <?php
           }
           ?>
@@ -116,7 +116,7 @@
 
           if (img.naturalWidth / img.naturalHeight > threshold) {
             // Gambar memiliki rasio landscape (lebar lebih besar dari tinggi)
-            image.classList.add('landscape');
+            image.classList.add('w-100');
           } else {
             // Gambar tidak memiliki rasio landscape
             image.classList.add('w-50');
