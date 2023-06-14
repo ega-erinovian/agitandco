@@ -7,6 +7,11 @@
 .fade-in.show {
     opacity: 1;
 }
+.text-justify {
+  text-align: justify;
+  text-justify: distribute-all-lines;
+}
+
 
 .overlay {
   position: fixed;
@@ -212,6 +217,21 @@ nav{
   top: 0;
   z-index: 100;
 }
+/* Logo pada mode mobile */
+@media screen and (max-width: 1024px) {
+  .navbar-brand img{
+    width: 65px;
+  }
+}
+@media (max-width: 1024px) {
+  .navbar-toggler {
+    background-color: rgba(255, 255, 255, 0.99); /* Warna putih dengan transparansi 50% */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+    /* color: #f9f9ec !important; */
+  }
+}
+
+
 
 nav .nav-link{
   color: var(--white) !important;
@@ -356,6 +376,15 @@ nav a.active{
   background-size: cover;
   background-repeat: no-repeat
 }
+.carousel-item {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.carousel-item.active {
+  opacity: 1;
+}
+
 
 /**** JOURNAL ****/
 /* Journal Container */
@@ -417,7 +446,7 @@ nav a.active{
 }
 
 .journal-details-text p{
-  font-size: .8rem;
+  font-size: 1rem;
   margin-bottom: 3rem;
 }
 
@@ -646,8 +675,14 @@ nav a.active{
 
 /*** FOOTER ***/
 footer p{
-  font-size: .75rem !important;
+  font-size: .90rem !important;
 }
+@media screen and (max-width: 767px) {
+  footer h1 {
+    font-size: 2rem!important; /* Ubah ukuran teks sesuai kebutuhan */
+  }
+}
+
 
 footer .col-lg-2 h1{
   font-size: 1.5rem;
@@ -691,10 +726,19 @@ footer .col-lg-2 h1{
 }
 
 /* Footer social media */
+
 footer .social-media a i{
   filter: brightness(.6);
   -webkit-filter: brightness(.6);
 }
+@media screen and (max-width: 1000px) {
+  footer .social-media{
+    margin-left: 38%;
+    display: flex;
+    text-align: center!important;
+  }
+}
+
 
 footer .social-media a:hover i{
   filter: brightness(.4);
@@ -753,18 +797,56 @@ footer .social-media a:hover i{
   font-size: 30px;
   font-weight: 1000;
   margin-bottom: 20px;
-  line-height: 25px;
+  /* line-height: 25px; */
 }
 
-.devisi {
+.devisi,#meetourteam {
   text-align: center;
-  color: black!important;
-  /* font-family: "Source Serif Pro"; */
+  color: var(--grey-700)!important;
+  font-family: "Source Serif Pro";
   font-size: 24px;
   font-weight: 1000;
   margin-bottom: 30px;
-  line-height: 25px;
+  /* line-height: 25px; */
 }
+.bi{
+  
+  color: var(--grey-700)!important;
+  
+}
+.devisi-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.devisi-list li {
+  display: inline-block;
+  margin-right: 10px;
+}
+@media (max-width: 767px) {
+  .devisi-list li {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+.devisi-list li:last-child {
+  margin-right: 0;
+}
+
+
+@media (max-width: 767px) {
+  .devisi,.devisi a{
+    font-size: 1.2rem;
+    padding-left: 25px;
+    padding-right: 25px;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
 
 .devisi-active{
   color: var(--w50)!important;
@@ -803,7 +885,7 @@ footer .social-media a:hover i{
   max-width: 372px;
   color: black !important;
   font-family: "Work Sans";
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 20px;
   margin-bottom: 35px;
@@ -830,7 +912,7 @@ footer .social-media a:hover i{
     max-width: 372px;
     color: black !important;
     font-family: "Work Sans";
-    font-size: 12px;
+    font-size: 18px;
     font-weight: 400;
     line-height: 20px;
     margin-bottom: 35px;

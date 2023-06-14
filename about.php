@@ -47,7 +47,7 @@
                     <div class="col-xs-12 nospace">
                         <div class="aligner-item wow fadeIn" style="max-width: 700px; padding: 0 60px;overflow: hidden!important;">
                             <h2 class="mb-50 work-medium " style="font-size: 20px;">HELLO</h2>
-                            <p class="work-regular ">Agit & Co is a photography company dedicated to creating beautiful and unforgettable moments through our lenses. We combine creative photography expertise with cutting-edge technology to deliver exceptional results to our clients. With our extensive experience in this industry, we are ready to capture every important detail in your life with stunning beauty. Agit&Co understands that every precious moment in your life deserves to be captured in impressive photos.</p>
+                            <p class="work-regular text-justify">Agit & Co is a photography company dedicated to creating beautiful and unforgettable moments through our lenses. We combine creative photography expertise with cutting-edge technology to deliver exceptional results to our clients. With our extensive experience in this industry, we are ready to capture every important detail in your life with stunning beauty. Agit&Co understands that every precious moment in your life deserves to be captured in impressive photos.</p>
                         </div>
                     </div>
                 </div>
@@ -55,12 +55,32 @@
             </div>
             <div class="container-fluid nospace" id="photographerSection">
                 <h1 id="meetourteam"class="judul work-bold">Meet Our Team</h1>
-                    <div class="devisi" style="overflow: hidden;">
-                        <a href="#meetourteam" onclick="toggleContent('Photographer')" id="photographerLink" class="devisi">Photographer</a> | 
-                        <a href="#meetourteam" onclick="toggleContent('Videographer')" id="videographerLink" class="devisi">Videographer</a> | 
-                        <a href="#meetourteam" onclick="toggleContent('Team')" id="teamLink" class="devisi">Team</a> |
-                        <a href="#meetourteam" onclick="showAll()" id="allLink" class="devisi">All</a>
-                    </div>
+                <div class="devisi" style="overflow: hidden;">
+                    <ul class="devisi-list">
+                        <li>
+                        <a href="#meetourteam" onclick="toggleContent('Photographer')" id="photographerLink" class="devisi">
+                            <i class="bi bi-back"></i> Photographer
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#meetourteam" onclick="toggleContent('Videographer')" id="videographerLink" class="devisi">
+                            <i class="bi bi-back"></i> Videographer
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#meetourteam" onclick="toggleContent('Team')" id="teamLink" class="devisi">
+                            <i class="bi bi-back"></i> Team
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#meetourteam" onclick="showAll()" id="allLink" class="devisi">
+                            <i class="bi bi-back"></i> All
+                        </a>
+                        </li>
+                    </ul>
+                </div>
+
+
             
                 <div class="container about-container">
                     <!-- <div class="row">
@@ -98,7 +118,7 @@
                                             <h1 class="photographerName"><?= $nama?></h1>
 
                                             <p class="photographerHashtag"><?= $devisi?></p>
-                                            <p class="photographerDescription"><?= $deskripsi?></p>
+                                            <p class="photographerDescription text-justify"><?= $deskripsi?></p>
                                             <div class="photographerInstagramWrap">
                                                <a href="https://www.instagram.com/<?=$ig?>/" class="photographerInstagram">@<?= $ig?></a>
                                             </div>
