@@ -2,6 +2,10 @@
 .fade-in {
     opacity: 0;
     transition: opacity 0.5s ease-in;
+    -webkit-transition: opacity 0.5s ease-in;
+    -moz-transition: opacity 0.5s ease-in;
+    -ms-transition: opacity 0.5s ease-in;
+    -o-transition: opacity 0.5s ease-in;
 }
 
 .fade-in.show {
@@ -769,6 +773,18 @@ footer .social-media a:hover i{
 .devisi-active{
   color: var(--w50)!important;
  
+}
+
+#meetourteam{
+  color: var(--grey-700) !important;
+}
+
+.devisi a, #meetourteam{
+  font-family: "Source Serif Pro" !important;
+}
+
+.devisi a, .devisi{
+  color: var(--w50) !important;
 }
 
 #about-filters li {

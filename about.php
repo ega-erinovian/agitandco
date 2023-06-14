@@ -56,10 +56,10 @@
             <div class="container-fluid nospace" id="photographerSection">
                 <h1 id="meetourteam"class="judul work-bold">Meet Our Team</h1>
                     <div class="devisi" style="overflow: hidden;">
-                        <a href="#meetourteam" onclick="toggleContent('Photographer')" id="photographerLink" class="devisi">Photographer</a> | 
-                        <a href="#meetourteam" onclick="toggleContent('Videographer')" id="videographerLink" class="devisi">Videographer</a> | 
-                        <a href="#meetourteam" onclick="toggleContent('Team')" id="teamLink" class="devisi">Team</a> |
-                        <a href="#meetourteam" onclick="showAll()" id="allLink" class="devisi">All</a>
+                        <a href="#meetourteam" onclick="toggleContent('Photographer')" id="photographerLink" class="devisi work-medium">Photographer</a> | 
+                        <a href="#meetourteam" onclick="toggleContent('Videographer')" id="videographerLink" class="devisi work-medium">Videographer</a> | 
+                        <a href="#meetourteam" onclick="toggleContent('Team')" id="teamLink" class="devisi work-medium">Team</a> |
+                        <a href="#meetourteam" onclick="showAll()" id="allLink" class="devisi work-medium">All</a>
                     </div>
             
                 <div class="container about-container">
