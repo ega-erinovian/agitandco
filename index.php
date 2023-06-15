@@ -46,7 +46,7 @@
                     </div>
                 </div>
             </nav>
-            <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="true">
+            <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel"  data-bs-interval="2000">
                 <div class="carousel-indicators">
                     <?php
                         include 'model/connect.php'; 
@@ -73,10 +73,14 @@
                     <?php } ?>
                 </div>
             </div>
+            
+
         </header>
         <p class="miring wow fadeIn work-medium visible-md visible-lg">Agit & Co</p>
         <?php include("footer.html"); ?>
     </section>
+    <!-- jQuery (diperlukan oleh Bootstrap) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     
     <!-- Vendor JS Files -->
     <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
@@ -88,6 +92,8 @@
     <script src="assets/vendor/php-email-form/validate.js"></script>
     <script src="assets/js/wow.min.js"></script>
     <script src="assets/js/wow.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
     <script>
@@ -95,5 +101,12 @@
         var wow = new WOW();
         wow.init();
     </script>
+    <script>
+            // Inisialisasi carousel
+            var carousel = new bootstrap.Carousel(document.getElementById('carouselExampleIndicators'), {
+                interval: 2000  // Atur interval pergantian slide
+            });
+            </script>
+    
 </body>
 </html>

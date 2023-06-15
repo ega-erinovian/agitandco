@@ -73,7 +73,7 @@
           <img src="<?='assets/img/journal/'.$id_journal.'/'.$img;?>" alt="cover"  class="mb-3 wow fadeInRight" data-wow-offset="100">
           <?php } ?>
         </div>
-        <div class="journal-details-text text-center w-50 wow fadeInRight" data-wow-offset="100">
+        <div class="journal-details-text text-center w-50 text-justify wow fadeInRight" data-wow-offset="100">
           <p style="text-align: justify;"><?= $deskripsi ?></p>
         </div>
       </div>
