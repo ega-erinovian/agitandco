@@ -107,6 +107,7 @@
                 <p class="miring wow fadeIn work-medium visible-md visible-lg ">Contact</p>
             </div>
         </div>
+        <?php include("backToTop.html"); ?>
         <?php include("footer.html"); ?>
     </section>
     <!-- Vendor JS Files -->
@@ -122,23 +123,6 @@
     <script src="assets/js/main.js"></script> 
     <script src="assets/js/wow.min.js"></script>
 
-    <!-- <script>
-        const dropdownNav = document.querySelector('.navbar-toggler');
-        const overlay = document.querySelector('.overlay');
-        const navbarCollapse = document.querySelector('.navbar-collapse');
-
-        dropdownNav.addEventListener('click', function() {
-            navbarCollapse.classList.toggle('show');
-            overlay.style.display = overlay.style.display === 'block' ? 'none' : 'block';
-        });
-
-        // Menutup dropdown saat overlay diklik
-        overlay.addEventListener('click', function() {
-            navbarCollapse.classList.remove('show');
-            overlay.style.display = 'none';
-        });
-
-    </script> -->
     <script>
         // Init WOW.js and get instance
         var wow = new WOW();

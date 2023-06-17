@@ -209,6 +209,7 @@
                   $lokasi   ="";
                   $idyoutube      ="";
                   $kategori     ="";
+                  $deskripsi     ="";
                 }else{
                     // 'Edit' Condition - Form terisi dengan data didatabase
                     $query = mysqli_query($connect, "SELECT * FROM projects WHERE id_project='".$_GET['id']."'");
@@ -219,6 +220,7 @@
                       $idyoutube  =$data[3];
                       $kategori   =$data[4];
                       $img_files  =$data[5];
+                      $deskripsi  =$data[6];
                     }
                 }
             }
@@ -255,7 +257,7 @@
                     </div> -->
                     <div class="mb-3">
                       <label for="exampleFormControlInput1" class="form-label fw-bold fw-bold">Id Youtube</label>
-                      <input type="text" class="form-control" name="idyoutube" id="projectName" placeholder="Masukkan Id Youtube" value='<?= $idyoutube ?>' />
+                      <input type="text" class="form-control" name="idyoutube" id="projectName" placeholder="Masukkan Id Youtube" value='<?= isset($idyoutube) ? $idyoutube : ''; ?>' />
                     </div>
                     <div class="mb-3">
                       <label for="exampleFormControlInput1" class="form-label fw-bold fw-bold">Kategori</label>
@@ -269,6 +271,10 @@
                         <option value="Etc" <?php if($kategori =="Etc") echo 'selected'; ?>>Etc</option>
 
                       </select>
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleFormControlInput1" class="form-label fw-bold fw-bold">Deskripsi</label>
+                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" name="deskripsi" placeholder="Tulis deskripsi jika ada..."><?= $deskripsi ?></textarea>
                     </div>
                     <div class="mb-3">
                       <label for="fileInput" class="form-label fw-bold fw-bold">Unggah Gambar</label><br/>

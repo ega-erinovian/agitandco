@@ -41,7 +41,7 @@
         <header class="portfolio" style="background-image: linear-gradient(#00000065, #00000000),url(<?='assets/img/page/'.$img?>)!important; background-size: cover; background-position: center; background-repeat: no-repeat;">
             <nav class="navbar navbar-expand-lg wow fadeInDown">
                 <div class="container">
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href="./index.php">
                       <img src="assets/img/me.png" alt="logo" width="75" />
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -123,6 +123,7 @@
                 </div>
             </div>
         </div>
+        <?php include("backToTop.html"); ?>
         <?php include("footer.html"); ?>
     </section>
     

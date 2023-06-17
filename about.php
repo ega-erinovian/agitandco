@@ -24,7 +24,7 @@
     <section class="about-section">
         <nav class="navbar navbar-expand-lg" style="background: #504A40 !important;">
             <div class="container">
-                <a class="navbar-brand wow fadeInDown" href="#">
+                <a class="navbar-brand wow fadeInDown" href="./index.php">
                     <img src="assets/img/me.png" alt="logo" width="75" />
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" style="color: #f9f9ec !important">
@@ -55,32 +55,12 @@
             </div>
             <div class="container-fluid nospace" id="photographerSection">
                 <h1 id="meetourteam"class="judul work-bold">Meet Our Team</h1>
-                <div class="devisi" style="overflow: hidden;">
-                    <ul class="devisi-list">
-                        <li>
-                        <a href="#meetourteam" onclick="toggleContent('Photographer')" id="photographerLink" class="devisi">
-                            <i class="bi bi-back"></i> Photographer
-                        </a>
-                        </li>
-                        <li>
-                        <a href="#meetourteam" onclick="toggleContent('Videographer')" id="videographerLink" class="devisi">
-                            <i class="bi bi-back"></i> Videographer
-                        </a>
-                        </li>
-                        <li>
-                        <a href="#meetourteam" onclick="toggleContent('Team')" id="teamLink" class="devisi">
-                            <i class="bi bi-back"></i> Team
-                        </a>
-                        </li>
-                        <li>
-                        <a href="#meetourteam" onclick="showAll()" id="allLink" class="devisi">
-                            <i class="bi bi-back"></i> All
-                        </a>
-                        </li>
-                    </ul>
-                </div>
-
-
+                    <div class="devisi" style="overflow: hidden;">
+                        <a href="#meetourteam" onclick="toggleContent('Photographer')" id="photographerLink" class="devisi">Photographer</a> | 
+                        <a href="#meetourteam" onclick="toggleContent('Videographer')" id="videographerLink" class="devisi">Videographer</a> | 
+                        <a href="#meetourteam" onclick="toggleContent('Team')" id="teamLink" class="devisi">Team</a> |
+                        <a href="#meetourteam" onclick="showAll()" id="allLink" class="devisi">All</a>
+                    </div>
             
                 <div class="container about-container">
                     <!-- <div class="row">
@@ -120,7 +100,7 @@
                                             <p class="photographerHashtag"><?= $devisi?></p>
                                             <p class="photographerDescription text-justify"><?= $deskripsi?></p>
                                             <div class="photographerInstagramWrap">
-                                               <a href="https://www.instagram.com/<?=$ig?>/" class="photographerInstagram">@<?= $ig?></a>
+                                               <a href="https://www.instagram.com/<?=$ig?>/" class="photographerInstagram" target="_blank">@<?= $ig?></a>
                                             </div>
                                     </div>
                                 </div>
@@ -134,6 +114,7 @@
     </article>
 
         <?php include 'footer.html' ?>
+        <?php include("backToTop.html"); ?>
     </section>
     <!-- jQuery -->
     <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>

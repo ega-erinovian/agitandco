@@ -43,7 +43,7 @@
         >
             <nav class="navbar navbar-expand-lg wow fadeInDown">
                 <div class="container">
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href="./index.php">
                       <img src="assets/img/me.png" alt="logo" width="75" />
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -159,6 +159,7 @@
                 <?php } ?>
             </ul>
         </div>
+        <?php include("backToTop.html"); ?>
         <?php include("footer.html"); ?>
     </section>
     

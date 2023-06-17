@@ -210,7 +210,8 @@
                         <th scope="col">lokasi</th>
                         <th scope="col">Id Youtube</th>
                         <th scope="col">Kategori</th>
-                        <th scope="col">Action</th>
+                        <th scope="col" style="width:35%">Deskripsi</th>
+                        <th scope="col" style="width:12%">Action</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -219,11 +220,12 @@
                         while($data=mysqli_fetch_array($query)){
                           $id_project =$data[0];
                           $nama       =$data[1];
-                          $lokasi   =$data[2];
-                          $idyoutube      =$data[3];
-                          $kategori     =$data[4];
+                          $lokasi     =$data[2];
+                          $idyoutube  =$data[3];
+                          $kategori   =$data[4];
                           $img_files  =$data[5];
-                      ?>
+                          $deskripsi  =$data[6];
+                          ?>
                       <tr>
                         <th scope="row">#<?= $id_project ?></th>
                         <td><?= $nama ?></td>
@@ -238,22 +240,23 @@
                             }else{
                               $bg = "bg-danger";
                             }
-                          ?>
+                            ?>
                           <span class="badge <?= $bg ?>"><?= $kategori ?></span></td>
-                        <td>
-                          <div class="row gap-2">
-                            <div class="col-2">
-                              <form action="./kelola_project.php" method="get">
-                                <input type="hidden" name="id" value=<?= $id_project ?> />
-                                <input type="hidden" name="kelola" value="edit" />
-                                <button type="submit" class="btn btn-primary btn-sm"><i class="bi bi-pencil-square"></i></button>
-                              </form>
-                            </div>
-                            <div class="col-2">
-                              <form action="./kelola_project.php" method="get">
-                                <input type="hidden" name="id" value=<?= $id_project ?> />
-                                <input type="hidden" name="kelola" value="hapus" />
-                                <button type="submit" class="btn btn-danger btn-sm"><i class="bi bi-trash-fill"></i></button>
+                          <td><?= $deskripsi ?></td>
+                          <td>
+                            <div class="row gap-2">
+                              <div class="col-2">
+                                <form action="./kelola_project.php" method="get">
+                                  <input type="hidden" name="id" value=<?= $id_project ?> />
+                                  <input type="hidden" name="kelola" value="edit" />
+                                  <button type="submit" class="btn btn-primary btn-sm"><i class="bi bi-pencil-square"></i></button>
+                                </form>
+                              </div>
+                              <div class="col-2">
+                                <form action="./kelola_project.php" method="get">
+                                  <input type="hidden" name="id" value=<?= $id_project ?> />
+                                  <input type="hidden" name="kelola" value="hapus" />
+                                  <button type="submit" class="btn btn-danger btn-sm"><i class="bi bi-trash-fill"></i></button>
                               </form>
                             </div>
                           </div>
@@ -268,6 +271,7 @@
                         <th scope="col">lokasi</th>
                         <th scope="col">Id Youtube</th>
                         <th scope="col">Kategori</th>
+                        <th scope="col" style="width:30%">Deskripsi</th>
                         <th scope="col">Action</th>
                       </tr>
                     </tfoot>

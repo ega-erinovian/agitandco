@@ -2,6 +2,10 @@
 .fade-in {
     opacity: 0;
     transition: opacity 0.5s ease-in;
+    -webkit-transition: opacity 0.5s ease-in;
+    -moz-transition: opacity 0.5s ease-in;
+    -ms-transition: opacity 0.5s ease-in;
+    -o-transition: opacity 0.5s ease-in;
 }
 
 .fade-in.show {
@@ -75,6 +79,7 @@
   --teracotta: #E2725B;
   --w50 :#857f72;
   --w400 :#a39e93;
+  --fs-deskripsi: 12px;
 }
 
 .text-black{color:#2B351A !important;}
@@ -211,6 +216,11 @@ header.portfolio{
   background-image: linear-gradient(#00000065, #00000000), url(https://iluminen.com/wp-content/uploads/2021/03/hotel-indonesia-kempinski-jakarta-indonesia-vinsy-dandy-wedding-iluminen-bali-photography-junebug-photobug-dirtybootsmessyhair-destination-photographer001-scaled-1.jpg);
 }
 
+span, p{
+  font-size: var(--fs-deskripsi);
+  letter-spacing: 1.5px;
+}
+
 /**** NAVBAR ****/
 nav{
   position: absolute;
@@ -228,6 +238,9 @@ nav{
     background-color: rgba(255, 255, 255, 0.99); /* Warna putih dengan transparansi 50% */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Efek bayangan */
     /* color: #f9f9ec !important; */
+  }
+  .navbar-nav{
+    top: 5rem;
   }
 }
 
@@ -546,13 +559,21 @@ nav a.active{
   text-transform: capitalize;
 }
 
-/* .portfolio-details header.portfolio{
-  background-image: linear-gradient(#2a2a2a88, #2a2a2a88), url(https://iluminen.com/wp-content/uploads/2023/02/AVW_0466322-scaled.jpg);
-} */
-
 .portfolio-details-content .portfolio-comp-logo{
   filter: brightness(.5);
   -webkit-filter: brightness(.5);
+}
+
+.portfolio-details-description h1{
+  color: var(--grey-700) !important;
+  text-transform: capitalize;
+}
+
+.portfolio-details-description p{
+  letter-spacing: 1.5px;
+  font-size: 12px;
+  color: var(--w50) !important;
+  text-align: justify;
 }
 
 .pagination {
@@ -563,7 +584,7 @@ nav a.active{
 }
 
 .pagination li {
-  display: inline
+  display: inline;
 }
 
 .pagination li a {
@@ -571,6 +592,56 @@ nav a.active{
   text-decoration: none;
   padding: 5px 10px;
   color: #000
+}
+
+.video-container{
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  video{
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+  }
+  &::after{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0,0,0,0.82);
+  }
+}
+
+.video-container #youtube-player{
+  width: 100vw;
+  height: 100vh;
+}
+
+.portfolio-details .back-link a{
+  color: var(--w50) !important;
+  font-size: var(--fs-deskripsi);
+  letter-spacing: 1.5px;
+  font-weight: bolder;
+  transition: all .25s;
+  -webkit-transition: all .25s;
+  -moz-transition: all .25s;
+  -ms-transition: all .25s;
+  -o-transition: all .25s;
+}
+
+.portfolio-details .back-link a:hover{
+  color: var(--grey-700) !important;
+}
+
+@media screen and (max-width: 768px) {
+  .portfolio-details-description{
+    min-width: 100% !important;
+  }
 }
 
 /* Active and Hoverable Pagination */
@@ -675,7 +746,8 @@ nav a.active{
 
 /*** FOOTER ***/
 footer p{
-  font-size: .90rem !important;
+  font-size: var(--fs-deskripsi) !important;
+  letter-spacing: 1.5px;
 }
 @media screen and (max-width: 767px) {
   footer h1 {
@@ -853,6 +925,18 @@ footer .social-media a:hover i{
  
 }
 
+#meetourteam{
+  color: var(--grey-700) !important;
+}
+
+.devisi a, #meetourteam{
+  font-family: "Source Serif Pro" !important;
+}
+
+.devisi a, .devisi{
+  color: var(--w50) !important;
+}
+
 #about-filters li {
   cursor: pointer;
   color: black!important;
@@ -884,8 +968,8 @@ footer .social-media a:hover i{
 
   max-width: 372px;
   color: black !important;
-  font-family: "Work Sans";
-  font-size: 16px;
+  /* font-family: "Work Sans"; */
+  font-size: var(--fs-deskripsi);
   font-weight: 400;
   line-height: 20px;
   margin-bottom: 35px;
@@ -906,32 +990,28 @@ footer .social-media a:hover i{
     margin: 0 auto; /* Memberikan celah atas dan bawah secara otomatis */
   }
  
-  
   .photographerDescription .a{
     
     max-width: 372px;
     color: black !important;
     font-family: "Work Sans";
-    font-size: 18px;
+    font-size: var(--fs-deskripsi);
     font-weight: 400;
     line-height: 20px;
     margin-bottom: 35px;
     }
   
   .photographerInstagram {
-  color: black!important;
+  color: var(--grey-700)!important;
   font-family: "Work Sans";
-  font-size: 11px;
-  font-weight: 400;
+  font-size: var(--fs-deskripsi);
+  font-weight: bolder;
+  letter-spacing: 1.5px;
   line-height: 25px;
   }
   
   .photographerInstagram:hover {
-  color: #eff0eb;
-  font-family: "Work Sans";
-  font-size: 11px;
-  font-weight: 400;
-  line-height: 25px;
+  color: var(--w50) !important;
   }
   
   
@@ -978,4 +1058,40 @@ footer .social-media a:hover i{
     -ms-transform: rotate(0deg);
     -o-transform: rotate(0deg);
   }
+}
+
+/*** Back to Top Button ***/
+/* Light Background */
+.home-section #back-to-up,
+.about-section #back-to-up,
+.journal-details #back-to-up,
+.portfolio-section #back-to-up,
+.portfolio-details #back-to-up{
+  background-color: var(--w50) !important;
+}
+
+.home-section #back-to-up i,
+.about-section #back-to-up i,
+.journal-details #back-to-up i,
+.portfolio-section #back-to-up i,
+.portfolio-details #back-to-up i{
+  color: var(--white) !important;
+}
+
+.home-section #back-to-up:hover,
+.about-section #back-to-up:hover,
+.journal-details #back-to-up:hover,
+.portfolio-section #back-to-up:hover,
+.portfolio-details #back-to-up:hover{
+  background-color: var(--grey-700) !important;
+}
+
+/* Dark Background */
+
+.journal-section #back-to-up{
+  background-color: var(--white) !important;
+}
+
+.journal-section #back-to-up i{
+  color: var(--grey-700) !important;
 }

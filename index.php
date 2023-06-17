@@ -29,7 +29,7 @@
         <header class="home">
             <nav class="navbar navbar-expand-lg wow fadeInDown wow fadeInDown">
                 <div class="container">
-                    <a class="navbar-brand wow fadeIn" href="#">
+                    <a class="navbar-brand wow fadeIn" href="./index.php">
                       <img src="assets/img/me.png" alt="logo" width="75" />
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -68,7 +68,7 @@
                     <?php
                         foreach($array_imgs as $img ){
                     ?>
-                    <div class="carousel-item <?php if(array_search($img, $array_imgs) == 0) echo 'active' ?>" style="background-image: linear-gradient(#00000065, #00000000), url(<?='assets/img/page/home/'.$img?>);">
+                    <div class="carousel-item <?php if(array_search($img, $array_imgs) == 0) echo 'active' ?>" style="background-image: linear-gradient(#00000065, #00000000), url(<?='assets/img/page/home/'.$img?>);" data-bs-interval="1000">
                     </div>
                     <?php } ?>
                 </div>
@@ -77,6 +77,7 @@
 
         </header>
         <p class="miring wow fadeIn work-medium visible-md visible-lg">Agit & Co</p>
+        <?php include("backToTop.html"); ?>
         <?php include("footer.html"); ?>
     </section>
     <!-- jQuery (diperlukan oleh Bootstrap) -->
