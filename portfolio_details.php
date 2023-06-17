@@ -69,7 +69,7 @@
           <i class="bi bi-arrow-down"></i>
         </div>
         <?php 
-        if(!empty($youtube))
+        if(!empty($youtube) && $kategori!="Film")
         {
           echo'<div id="video-background" class="video-container"</div>';
         }
@@ -158,7 +158,7 @@ var videoBackground = document.getElementById('video-background');
 
 // Buat iframe untuk video YouTube
 var videoIframe = document.createElement('iframe');
-videoIframe.src = 'https://www.youtube.com/embed/<?=$youtube?>?autoplay=1&mute=1&loop=1&controls=0&modestbranding=1';
+videoIframe.src = 'https://www.youtube.com/embed/<?=$youtube?>?autoplay=1&mute=1&loop=1&controls=0&modestbranding=1&showinfo=0&quality=hd720';
 videoIframe.setAttribute('allowfullscreen', '');
 videoIframe.setAttribute('frameborder', '0');
 videoIframe.setAttribute('width', '100%');

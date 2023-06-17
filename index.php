@@ -46,7 +46,7 @@
                     </div>
                 </div>
             </nav>
-            <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel"  data-bs-interval="5000">
+            <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel"  data-bs-interval="10000">
                 <div class="carousel-indicators">
                     <?php
                         include 'model/connect.php'; 
@@ -105,7 +105,7 @@
     <script>
             // Inisialisasi carousel
             var carousel = new bootstrap.Carousel(document.getElementById('carouselExampleIndicators'), {
-                interval: 2000  // Atur interval pergantian slide
+                interval: 10000  // Atur interval pergantian slide
             });
             </script>
     
