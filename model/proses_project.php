@@ -102,6 +102,9 @@
                 if (!empty($idyoutube)) {
                     $setClauses[] = "`idyoutube` = '$idyoutube'";
                 }
+                if (empty($idyoutube)) {
+                    $setClauses[] = "`idyoutube` = NULL";
+                }
                 
                 if (!empty($kategori)) {
                     $setClauses[] = "`kategori` = '$kategori'";

@@ -26,7 +26,7 @@
 </head>
 <body>
     <section class="portfolio-section">
-        <header class="portfolio">
+        <header class="portfolios">
             <nav class="navbar navbar-expand-lg wow fadeInDown">
                 <div class="container">
                     <a class="navbar-brand" href="./index.php">

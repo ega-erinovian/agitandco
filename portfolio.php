@@ -27,7 +27,7 @@
 <body>
     <section class="portfolio-section">
         <?php
-            $query = mysqli_query($connect, "SELECT * FROM background WHERE tempatgambar='journal'");
+            $query = mysqli_query($connect, "SELECT * FROM background WHERE tempatgambar='portofolio'");
             while($data=mysqli_fetch_array($query)){
               $id_gambar            =$data[0];
               $tempatgambar         =$data[1];
@@ -38,7 +38,7 @@
                 $array_imgs = explode(",", $img_files);
             }
         ?>
-        <header class="portfolio" style="background-image: linear-gradient(#00000065, #00000000),url(<?='assets/img/page/'.$img?>)!important; background-size: cover; background-position: center; background-repeat: no-repeat;">
+        <header class="portfolio" style="background-image: linear-gradient(#00000065, #00000000),url(<?='assets/img/page/'.$img_files?>)!important; background-size: cover; background-position: center; background-repeat: no-repeat;">
             <nav class="navbar navbar-expand-lg wow fadeInDown">
                 <div class="container">
                     <a class="navbar-brand" href="./index.php">

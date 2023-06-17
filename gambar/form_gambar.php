@@ -250,6 +250,9 @@
                     <?php
                       if($_GET['kelola'] == 'edit'){
                     ?>
+                    <?php
+                            if ($img_files!=''){
+                            ?>
                     <div class="mb-3">
                       <label for="fileInput" class="form-label fw-bold fw-bold">Daftar Gambar</label>
                       <div class="form-text"><span class="text-danger">*</span> Centang untuk menghapus gambar</div>
@@ -284,6 +287,7 @@
                         </tfoot>
                       </table>
                     </div>
+                    <?php } ?>
                     <?php } ?>
                     <div class="row">
                       <div class="col-12" style="text-align: end;">

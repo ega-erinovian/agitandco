@@ -39,7 +39,7 @@
           $array_imgs = explode(",", $img_files);
         ?>
     <section class="portfolio-details">
-      <header class="portfolio" <?php if($youtube == "") { ?>
+      <header class="portfolio1" <?php if($youtube == "") { ?>
         style="background-image: linear-gradient(#2b262384,#2b262384),url(<?='assets/img/portofolio/'.$id_project.'/'.$array_imgs[0];?>);"
       <?php } ?>>
         <nav class="navbar navbar-expand-lg wow fadeInDown">
@@ -68,9 +68,14 @@
         <div class="scrolldown text-light text-center w-100">
           <i class="bi bi-arrow-down"></i>
         </div>
-        <div class="video-container">
-            <video src="https://storage.coverr.co/videos/GK300Fvvg4T1LYiC9SJpUAK36CDldcR7A?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6Ijg3NjdFMzIzRjlGQzEzN0E4QTAyIiwiaWF0IjoxNjE0NzE0NjcxfQ.EnOnRFM1w-1SJY_AfEhhjR6S_dPgXx0lj1kKMvZheTk" autoplay loop muted></video>
-        </div>
+        <?php 
+        if(!empty($youtube))
+        {
+          echo'<div id="video-background" class="video-container"</div>';
+        }
+        
+        ?>
+        <?php ?>
       </header>
       <div class="portfolio-details-content py-5 wow fadeInDown">
         <div class="container w-100 d-flex flex-column align-items-center justify-content-center">
@@ -146,6 +151,22 @@
           console.log('Gagal memuat gambar');
         });
   });
+</script>
+<script>
+  // Dapatkan referensi ke elemen video-background
+var videoBackground = document.getElementById('video-background');
+
+// Buat iframe untuk video YouTube
+var videoIframe = document.createElement('iframe');
+videoIframe.src = 'https://www.youtube.com/embed/<?=$youtube?>?autoplay=1&mute=1&loop=1&controls=0&modestbranding=1';
+videoIframe.setAttribute('allowfullscreen', '');
+videoIframe.setAttribute('frameborder', '0');
+videoIframe.setAttribute('width', '100%');
+videoIframe.setAttribute('height', '100%');
+
+// Tambahkan iframe ke dalam elemen video-background
+videoBackground.appendChild(videoIframe);
+
 </script>
 
 </body>
