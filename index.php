@@ -77,6 +77,7 @@
 
         </header>
         <p class="miring wow fadeIn work-medium visible-md visible-lg">Agit & Co</p>
+        <?php include("backToTop.html"); ?>
         <?php include("footer.html"); ?>
     </section>
     <!-- jQuery (diperlukan oleh Bootstrap) -->

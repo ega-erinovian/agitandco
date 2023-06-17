@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.3
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 12, 2023 at 08:07 AM
--- Server version: 10.4.14-MariaDB
--- PHP Version: 7.2.34
+-- Generation Time: Jun 17, 2023 at 09:38 AM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 7.4.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -101,6 +101,7 @@ CREATE TABLE `pesan` (
 --
 
 INSERT INTO `pesan` (`id_pesan`, `name`, `email`, `message`) VALUES
+('0ouU6', 'Bagas', 'bagas@gmail.com', 'Test pesan'),
 ('IBu5D', 'maulana', 'maulanairsyad66@gmail.com', 'halo halo ges'),
 ('mYUTz', 'test', 'test', 'qwerty');
 
@@ -114,19 +115,21 @@ CREATE TABLE `projects` (
   `id_project` varchar(6) NOT NULL,
   `name` varchar(100) NOT NULL,
   `lokasi` varchar(30) NOT NULL,
-  `idyoutube` varchar(30) NOT NULL,
+  `idyoutube` varchar(30) DEFAULT NULL,
   `kategori` varchar(100) NOT NULL,
-  `img` text NOT NULL
+  `img` text DEFAULT NULL,
+  `deskripsi` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `projects`
 --
 
-INSERT INTO `projects` (`id_project`, `name`, `lokasi`, `idyoutube`, `kategori`, `img`) VALUES
-('qkaOB', 'maul', 'Bali', 'Ut00hLerGBo', 'Pre-Wedding', 'home1.jpg'),
-('YJzwr', 'ega', '', 'LcBQ1DMOThQ', 'Engagement', 'wedding1.jpg,wedding2.jpg,wedding4.jpg,wedding5.jpg,wedding6.jpg'),
-('z9DeS', 'tes3op', 'PT. Kereta Api Indonesia UPT. ', 'asda', 'Pre-Wedding', '');
+INSERT INTO `projects` (`id_project`, `name`, `lokasi`, `idyoutube`, `kategori`, `img`, `deskripsi`) VALUES
+('8qrFg', 'Wedding weddingan', 'Bali', 'fZbNiMMOKn4', 'Film', '045-storyboard-1.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus luctus pellentesque. Phasellus egestas malesuada felis, et ornare enim pellentesque id. Nunc commodo massa eros, eu lobortis justo fringilla in. Sed sodales interdum mi lacinia aliquet. Praesent iaculis a mi ac iaculis. Phasellus vitae imperdiet turpis, id lobortis ipsum.'),
+('BcJny', 'Wedding of Cindy & Viko', 'Yogyakarta', 'ojW5tB9J4q4', 'Film', 'MWW03050-2-1.jpg', 'Yogyakarta Wedding Film of Cindy & Viko by AGIT & CO\r\nCheck our instagram for more @agitprimaswara.co'),
+('qkaOB', 'maul', 'Bali', 'a', 'Pre-Wedding', '010-storyboard-3.jpg,011-storyboard-3.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus luctus pellentesque. Phasellus egestas malesuada felis, et ornare enim pellentesque id. Nunc commodo massa eros, eu lobortis justo fringilla in. Sed sodales interdum mi lacinia aliquet. Praesent iaculis a mi ac iaculis. Phasellus vitae imperdiet turpis, id lobortis ipsum.'),
+('YJzwr', 'Wedding Ega', 'Eropa Utara', 'LcBQ1DMOThQ', 'Pre-Wedding', 'MWW03050-2-1.jpg,pexels-photo-2111255.webp,pexels-photo-15124705.webp,007-storyboard-3.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus luctus pellentesque. Phasellus egestas malesuada felis, et ornare enim pellentesque id. Nunc commodo massa eros, eu lobortis justo fringilla in. Sed sodales interdum mi lacinia aliquet. Praesent iaculis a mi ac iaculis. Phasellus vitae imperdiet turpis, id lobortis ipsum.');
 
 -- --------------------------------------------------------
 

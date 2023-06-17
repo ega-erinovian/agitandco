@@ -159,6 +159,7 @@
                 <?php } ?>
             </ul>
         </div>
+        <?php include("backToTop.html"); ?>
         <?php include("footer.html"); ?>
     </section>
     

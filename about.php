@@ -114,6 +114,7 @@
     </article>
 
         <?php include 'footer.html' ?>
+        <?php include("backToTop.html"); ?>
     </section>
     <!-- jQuery -->
     <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>

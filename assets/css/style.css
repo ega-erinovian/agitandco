@@ -622,6 +622,22 @@ nav a.active{
   height: 100vh;
 }
 
+.portfolio-details .back-link a{
+  color: var(--w50) !important;
+  font-size: var(--fs-deskripsi);
+  letter-spacing: 1.5px;
+  font-weight: bolder;
+  transition: all .25s;
+  -webkit-transition: all .25s;
+  -moz-transition: all .25s;
+  -ms-transition: all .25s;
+  -o-transition: all .25s;
+}
+
+.portfolio-details .back-link a:hover{
+  color: var(--grey-700) !important;
+}
+
 @media screen and (max-width: 768px) {
   .portfolio-details-description{
     min-width: 100% !important;
@@ -1042,4 +1058,40 @@ footer .social-media a:hover i{
     -ms-transform: rotate(0deg);
     -o-transform: rotate(0deg);
   }
+}
+
+/*** Back to Top Button ***/
+/* Light Background */
+.home-section #back-to-up,
+.about-section #back-to-up,
+.journal-details #back-to-up,
+.portfolio-section #back-to-up,
+.portfolio-details #back-to-up{
+  background-color: var(--w50) !important;
+}
+
+.home-section #back-to-up i,
+.about-section #back-to-up i,
+.journal-details #back-to-up i,
+.portfolio-section #back-to-up i,
+.portfolio-details #back-to-up i{
+  color: var(--white) !important;
+}
+
+.home-section #back-to-up:hover,
+.about-section #back-to-up:hover,
+.journal-details #back-to-up:hover,
+.portfolio-section #back-to-up:hover,
+.portfolio-details #back-to-up:hover{
+  background-color: var(--grey-700) !important;
+}
+
+/* Dark Background */
+
+.journal-section #back-to-up{
+  background-color: var(--white) !important;
+}
+
+.journal-section #back-to-up i{
+  color: var(--grey-700) !important;
 }

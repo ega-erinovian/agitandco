@@ -1,0 +1,21 @@
+<button class="btn btn-sm rounded-circle position-fixed bottom-0 end-0 translate-middle d-none" onclick="scrollToTop()" id="back-to-up">
+    <i class="bi bi-arrow-up"></i>
+</button>
+
+<script>
+    window.onscroll = () => {
+        toggleTopButton();
+    }
+    function scrollToTop(){
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    }
+
+    function toggleTopButton() {
+        if (document.body.scrollTop > 20 ||
+            document.documentElement.scrollTop > 20) {
+            document.getElementById('back-to-up').classList.remove('d-none');
+        } else {
+            document.getElementById('back-to-up').classList.add('d-none');
+        }
+    }
+</script>

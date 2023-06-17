@@ -83,24 +83,31 @@
           <div class="portfolio-details-description container mt-5 w-50">
             <p class="fw-bolder fs-6 mb-0"><?= $lokasi ?></p>
             <h1 class="me-2 mb-0"><?= $name ?></h1>
-            <p class="mt-3 text-dark"><?= $deskripsi ?></p>
+            <p class="mt-3 mb-0 text-dark"><?= $deskripsi ?></p>
           </div>
           <div class="portfolio-details-gallery container d-flex flex-wrap justify-content-center mt-5 g-4 wow fadeInRight">
           <?php
-            $array_imgs = explode(",", $img_files);
-            $i = 0;
-            foreach ($array_imgs as $img) {
-              $i++;
+            if($kategori != "Film"){
+              $array_imgs = explode(",", $img_files);
+              $i = 0;
+              foreach ($array_imgs as $img) {
+                $i++;
           ?>
             <img id="portfolio-image" src="<?='assets/img/portofolio/'.$id_project.'/'.$img;?>" alt="portfolio">
-            <?php
-          }
+          <?php
+              }}else{
           ?>
+            <iframe width="100%" height="352" src=<?= "https://www.youtube.com/embed/".$youtube ?> title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <?php } ?>
         </div>
     
         </div>
       </div>
+      <div class="back-link container">
+        <a href=<?= "portfolios.php?page-nr=1&kategori=".$kategori ?>><i class="bi bi-arrow-left"></i><?= " Back to ".$kategori ?></a>
+      </div>
       <?php include("footer.html"); ?>
+      <?php include("backToTop.html"); ?>
     </section>
     
     <!-- Vendor JS Files -->
