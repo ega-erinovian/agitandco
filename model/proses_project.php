@@ -18,6 +18,8 @@
         $lokasi         = $_POST['lokasi'];
         $idyoutube      = $_POST['idyoutube'];
         $kategori       = $_POST['kategori'];
+        $deskripsi      = $_POST['deskripsi'];
+        echo $idyoutube;
 
         if(isset($_POST['delete_img'])){
             $delete_img = $_POST['delete_img'];
@@ -68,7 +70,7 @@
 
     switch($_POST['kelola']){
         case 'tambah':
-            $query = "INSERT INTO ".$tableName." VALUE('$id_project', '$nama', '$lokasi', '$idyoutube', '$kategori', '$string_img')";
+            $query = "INSERT INTO ".$tableName." VALUE('$id_project', '$nama', '$lokasi', '$idyoutube', '$kategori', '$string_img', '$deskripsi')";
             if(mysqli_query($connect, $query)){
                 // send message to table log_activities
                 echo "Data Added Successfully";
@@ -79,23 +81,6 @@
             header('Location: ../projects/tabel_project.php');
             break;
         case 'edit':
-            // Hapus gambar yang dicentang di kelola_project
-            // if(isset($delete_img)){
-            //     $originalArray = explode(',', $tmp_img_name);
-            //     foreach($delete_img as $img){
-            //         $path = realpath('../assets/img/portofolio/'.$id_project.'/'.$img);
-            //         unlink($path);
-
-            //         // Menghapus nilai pada array
-            //         foreach ($originalArray as $key => $value) {
-            //             if ($value == $img) {
-            //                 unset($originalArray[$key]);
-            //             }
-            //         }
-            //     }
-
-            //     $string_img = implode(",", $originalArray);
-            // }
 
             if(empty($string_img) == 0){
                 // $query = "UPDATE ".$tableName." SET `id_project`='$id_project', `name`='$nama', `lokasi`='$lokasi', `idyoutube`='$idyoutube', `kategori`='$kategori', `img`='$string_img' WHERE `id_project` = '$id_project'";
@@ -114,12 +99,16 @@
                     $setClauses[] = "`lokasi` = '$lokasi'";
                 }
 
-                if (!empty($id_youtube)) {
-                    $setClauses[] = "`id_youtube` = '$id_youtube'";
+                if (!empty($idyoutube)) {
+                    $setClauses[] = "`idyoutube` = '$idyoutube'";
                 }
                 
                 if (!empty($kategori)) {
                     $setClauses[] = "`kategori` = '$kategori'";
+                }
+
+                if (!empty($deskripsi)) {
+                    $setClauses[] = "`deskripsi` = '$deskripsi'";
                 }
 
                 if (isset($delete_img)) {
@@ -155,7 +144,35 @@
 
             }
             else{
-                $query = "UPDATE ".$tableName." SET `id_project`='$id_project', `name`='$nama', `lokasi`='$lokasi', `idyoutube`='$idyoutube', `kategori`='$kategori' WHERE `id_project` = '$id_project'";
+                $query = "UPDATE " . $tableName . " SET ";
+                $setClauses = [];
+
+                if (!empty($id_project)) {
+                    $setClauses[] = "`id_project` = '$id_project'";
+                }
+
+                if (!empty($nama)) {
+                    $setClauses[] = "`name` = '$nama'";
+                }
+
+                if (!empty($lokasi)) {
+                    $setClauses[] = "`lokasi` = '$lokasi'";
+                }
+
+                if (!empty($idyoutube)) {
+                    $setClauses[] = "`idyoutube` = '$idyoutube'";
+                }
+                
+                if (!empty($kategori)) {
+                    $setClauses[] = "`kategori` = '$kategori'";
+                }
+
+                if (!empty($deskripsi)) {
+                    $setClauses[] = "`deskripsi` = '$deskripsi'";
+                }
+
+                $query .= implode(", ", $setClauses);
+                $query .= " WHERE `id_project` = '$id_project'";
             }
             
             if(mysqli_query($connect, $query)){

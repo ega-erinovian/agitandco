@@ -22,6 +22,8 @@
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/animate.css" rel="stylesheet">
+
+    <script src="https://www.youtube.com/player_api"></script>
 </head>
 <body>
         <?php 
@@ -30,8 +32,10 @@
             $id_project = $data[0];
             $name       = $data[1];
             $lokasi     = $data[2];
+            $youtube    = $data[3];
             $kategori   = $data[4];
-            $img_files        = $data[5];
+            $img_files  = $data[5];
+            $deskripsi  = $data[6];
           }
 
           $array_imgs = explode(",", $img_files);
@@ -40,7 +44,7 @@
       <header class="portfolio" style="background-image: linear-gradient(#2b262384,#2b262384),url(<?='assets/img/portofolio/'.$id_project.'/'.$array_imgs[0];?>);">
         <nav class="navbar navbar-expand-lg wow fadeInDown">
           <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="./index.php">
               <img src="assets/img/me.png" alt="logo" width="75" />
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -64,11 +68,22 @@
         <div class="scrolldown text-light text-center w-100">
           <i class="bi bi-arrow-down"></i>
         </div>
+          <?php if($youtube != ""){
+            echo '<div class="video-container">
+            <video id="youtube-player" autoplay loop muted><source src="https://www.youtube.com/embed/yMrY4SYFlqk?autoplay=1" type="video/mp4"></video>
+        </div>';}
+            ?>
+        
       </header>
       <div class="portfolio-details-content py-5 wow fadeInDown">
         <div class="container w-100 d-flex flex-column align-items-center justify-content-center">
           <div class="portfolio-comp-logo w-100 d-flex align-items-center justify-content-center">
             <img src="assets/img/me.png" alt="logo" width="50" />
+          </div>
+          <div class="portfolio-details-description container mt-5 w-50">
+            <p class="fw-bolder fs-6 mb-0"><?= $lokasi ?></p>
+            <h1 class="me-2 mb-0"><?= $name ?></h1>
+            <p class="mt-3 text-dark"><?= $deskripsi ?></p>
           </div>
           <div class="portfolio-details-gallery container d-flex flex-wrap justify-content-center mt-5 g-4 wow fadeInRight">
           <?php

@@ -24,7 +24,7 @@
     <section class="about-section">
         <nav class="navbar navbar-expand-lg" style="background: #504A40 !important;">
             <div class="container">
-                <a class="navbar-brand wow fadeInDown" href="#">
+                <a class="navbar-brand wow fadeInDown" href="./index.php">
                     <img src="assets/img/me.png" alt="logo" width="75" />
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" style="color: #f9f9ec !important">
@@ -100,7 +100,7 @@
                                             <p class="photographerHashtag"><?= $devisi?></p>
                                             <p class="photographerDescription text-justify"><?= $deskripsi?></p>
                                             <div class="photographerInstagramWrap">
-                                               <a href="https://www.instagram.com/<?=$ig?>/" class="photographerInstagram">@<?= $ig?></a>
+                                               <a href="https://www.instagram.com/<?=$ig?>/" class="photographerInstagram" target="_blank">@<?= $ig?></a>
                                             </div>
                                     </div>
                                 </div>
