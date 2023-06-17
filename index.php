@@ -46,7 +46,7 @@
                     </div>
                 </div>
             </nav>
-            <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel"  data-bs-interval="2000">
+            <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel"  data-bs-interval="5000">
                 <div class="carousel-indicators">
                     <?php
                         include 'model/connect.php'; 
