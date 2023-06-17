@@ -22,8 +22,6 @@
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/animate.css" rel="stylesheet">
-
-    <script src="https://www.youtube.com/player_api"></script>
 </head>
 <body>
         <?php 
@@ -41,7 +39,9 @@
           $array_imgs = explode(",", $img_files);
         ?>
     <section class="portfolio-details">
-      <header class="portfolio" style="background-image: linear-gradient(#2b262384,#2b262384),url(<?='assets/img/portofolio/'.$id_project.'/'.$array_imgs[0];?>);">
+      <header class="portfolio" <?php if($youtube == "") { ?>
+        style="background-image: linear-gradient(#2b262384,#2b262384),url(<?='assets/img/portofolio/'.$id_project.'/'.$array_imgs[0];?>);"
+      <?php } ?>>
         <nav class="navbar navbar-expand-lg wow fadeInDown">
           <div class="container">
             <a class="navbar-brand" href="./index.php">
@@ -68,12 +68,9 @@
         <div class="scrolldown text-light text-center w-100">
           <i class="bi bi-arrow-down"></i>
         </div>
-          <?php if($youtube != ""){
-            echo '<div class="video-container">
-            <video id="youtube-player" autoplay loop muted><source src="https://www.youtube.com/embed/yMrY4SYFlqk?autoplay=1" type="video/mp4"></video>
-        </div>';}
-            ?>
-        
+        <div class="video-container">
+            <video src="https://storage.coverr.co/videos/GK300Fvvg4T1LYiC9SJpUAK36CDldcR7A?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6Ijg3NjdFMzIzRjlGQzEzN0E4QTAyIiwiaWF0IjoxNjE0NzE0NjcxfQ.EnOnRFM1w-1SJY_AfEhhjR6S_dPgXx0lj1kKMvZheTk" autoplay loop muted></video>
+        </div>
       </header>
       <div class="portfolio-details-content py-5 wow fadeInDown">
         <div class="container w-100 d-flex flex-column align-items-center justify-content-center">
