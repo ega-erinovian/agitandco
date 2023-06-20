@@ -39,9 +39,13 @@
           $array_imgs = explode(",", $img_files);
         ?>
     <section class="portfolio-details">
-      <header class="portfolio1" <?php if($youtube == "") { ?>
+      <header class="portfolio1" <?php if($kategori != "Film"){
+        if($youtube == "") { ?>
+          style="background-image: linear-gradient(#2b262384,#2b262384),url(<?='assets/img/portofolio/'.$id_project.'/'.$array_imgs[0];?>);"
+        <?php } ?>
+      <?php }else{ ?>
         style="background-image: linear-gradient(#2b262384,#2b262384),url(<?='assets/img/portofolio/'.$id_project.'/'.$array_imgs[0];?>);"
-      <?php } ?>>
+     <?php } ?>>
         <nav class="navbar navbar-expand-lg wow fadeInDown">
           <div class="container">
             <a class="navbar-brand" href="./index.php">
@@ -71,7 +75,7 @@
         <?php 
         if(!empty($youtube) && $kategori!="Film")
         {
-          echo'<div id="video-background" class="video-container"</div>';
+          echo'<div id="video-background" class="video-container"></div>';
         }
         
         ?>

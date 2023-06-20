@@ -54,13 +54,15 @@
                 <p class="miring wow fadeIn wow fadeIn wow fadeIn wow fadeIn wow fadeIn wow fadeIn work-medium visible-md visible-lg ">About us</p>
             </div>
             <div class="container-fluid nospace" id="photographerSection">
-                <h1 id="meetourteam"class="judul work-bold">Meet Our Team</h1>
-                    <div class="devisi" style="overflow: hidden;">
-                        <a href="#meetourteam" onclick="toggleContent('Photographer')" id="photographerLink" class="devisi">Photographer</a> | 
-                        <a href="#meetourteam" onclick="toggleContent('Videographer')" id="videographerLink" class="devisi">Videographer</a> | 
-                        <a href="#meetourteam" onclick="toggleContent('Team')" id="teamLink" class="devisi">Team</a> |
+                <div class="meetourteam-wrapper d-flex align-items-center flex-column">
+                    <h1 id="meetourteam" class="judul work-bold mb-1 fs-1">Meet Our Team</h1>
+                    <div class="devisi w-50 d-flex justify-content-evenly flex-wrap" style="overflow: hidden;">
+                        <a href="#meetourteam" onclick="toggleContent('Photographer')" id="photographerLink" class="devisi">Photographer</a> 
+                        <a href="#meetourteam" onclick="toggleContent('Videographer')" id="videographerLink" class="devisi">Videographer</a> 
+                        <a href="#meetourteam" onclick="toggleContent('Team')" id="teamLink" class="devisi">Team</a>
                         <a href="#meetourteam" onclick="showAll()" id="allLink" class="devisi">All</a>
                     </div>
+                </div>
             
                 <div class="container about-container">
                     <!-- <div class="row">

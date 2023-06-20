@@ -794,6 +794,10 @@ footer .col-lg-2 h1{
   color: var(--grey-700) !important;
 }
 
+.journal-section .social-media a i{
+  color: var(--white) !important;
+}
+
 /* Footer social media */
 
 footer .social-media a i{
@@ -835,7 +839,7 @@ footer .social-media a:hover i{
   background-color: var(--w50)!important;
   color: #000!important;
   margin:0; padding:0;
-  overflow: hidden!important;
+  overflow-y: hidden!important;
   margin-top: -30px; 
   @media (max-width: 767px) {
     
@@ -859,6 +863,10 @@ footer .social-media a:hover i{
   }
 }
 
+.devisi span{
+  color: var(--w50) !important;
+}
+
 .judul{
   text-align: center;
   color: var(--w400)!important;
@@ -878,8 +886,12 @@ footer .social-media a:hover i{
   margin-bottom: 30px;
   /* line-height: 25px; */
 }
+
+.devisi a:hover{
+  color: var(--w400) !important;
+}
+
 .bi{
-  
   color: var(--grey-700)!important;
   
 }
@@ -898,6 +910,24 @@ footer .social-media a:hover i{
     display: block;
     margin-right: 0;
     margin-bottom: 10px;
+  }
+  #meetourteam{
+    margin-bottom: 1rem !important;
+  }
+  /* #meetourteam{
+    margin-left: 3rem;
+    margin-bottom: 1rem !important;
+  }
+  .meetourteam-wrapper{
+    align-items: start !important;
+  }
+  .devisi,#meetourteam{
+    width: 100% !important;
+    display: block !important;
+    text-align: start !important;
+  } */
+  .devisi a{
+    margin-bottom: 1rem;
   }
 }
 
