@@ -101,13 +101,13 @@
                 <!-- Go to first page -->
                 <?php 
                     if(isset($_GET["page-nr"]) && $_GET["page-nr"]>1){ ?>     
-                        <li><a href="portfolios.php?page-nr=1#portfolio"><<</a></li>
+                        <li><a href="portfolios.php?page-nr=1&kategori=<?=$kategori?>"><<</a></li>
                 <?php } ?>
 
                 <!-- Go to previous page -->
                 <?php 
                     if(isset($_GET["page-nr"]) && $_GET["page-nr"] > 1){ ?>
-                        <li><a href="portfolios.php?page-nr=<?= $_GET["page-nr"] - 1 ?>#portfolio"><</a></li>
+                        <li><a href="portfolios.php?page-nr=<?= $_GET["page-nr"] - 1 ?>&kategori=<?=$kategori?>"><</a></li>
                 <?php
                     }else{?>
                         <li><a><</a></li>
@@ -115,7 +115,7 @@
                 <?php  
                     for($counter = 1; $counter <= $pages; $counter++){
                         ?>
-                        <li class="mx-1"><a <?php if($_GET['page-nr']==$counter) echo "class='active'" ?> href="portfolios.php?page-nr=<?= $counter ?>#portfolio"><?= $counter ?></a></li>
+                        <li class="mx-1"><a <?php if($_GET['page-nr']==$counter) echo "class='active'" ?> href="portfolios.php?page-nr=<?= $counter ?>&kategori=<?=$kategori?>"><?= $counter ?></a></li>
                         <?php
                     }
                 ?>
@@ -128,21 +128,21 @@
                     <?php
                         }else{
                     ?>
-                        <li><a href="portfolios.php?page-nr=2#portfolio">></a></li>
+                        <li><a href="portfolios.php?page-nr=2&kategori=<?=$kategori?>">></a></li>
                     <?php } ?>
                 <?php
                     }else{
                         if($_GET["page-nr"] > $pages){ ?>
                             <li><a>></a></li>
                 <?php   }else{ ?>
-                            <li><a href="portfolios.php?page-nr=<?= $_GET["page-nr"] + 1 ?>#portfolio">></a></li>
+                            <li><a href="portfolios.php?page-nr=<?= $_GET["page-nr"] + 1 ?>&kategori=<?=$kategori?>">></a></li>
                 <?php   }?>
                 <?php } ?>
 
                 <!-- Go to last page -->
                 <?php 
                     if(isset($_GET["page-nr"]) && $_GET["page-nr"]<$pages){ ?>     
-                        <li><a href="portfolios.php?page-nr=<?= $pages ?>#portfolio">>></a></li>
+                        <li><a href="portfolios.php?page-nr=<?= $pages ?>&kategori=<?=$kategori?>">>></a></li>
                 <?php } ?>
             </ul>
         </div>
